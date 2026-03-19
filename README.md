@@ -61,8 +61,8 @@ git clone
 # cd 进入项目根目录
 cd lowcode-studio
 
-# 执行启动 docker compose 脚本
-./shell/start-lowcode-platform.sh
+# docker compose 启动
+docker compose up -d
 
 ```
 
