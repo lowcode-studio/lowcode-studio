@@ -27,7 +27,7 @@ services:
       - lowcode
   
   lowcode-render:
-    image: lowcodestudio/lowcode-render:develop-20251229-075200
+    image: lowcodestudio/lowcode-render:develop-20260119-130412
     container_name: lowcode-render
     restart: unless-stopped
     environment:
