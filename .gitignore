@@ -1,0 +1,14 @@
+.DS_Store
+
+logs/kong/*
+logs/konga/*
+logs/mysql/*
+logs/postgresql/*
+logs/minio/*
+logs/platform/*
+
+data/mysql/*
+data/postgresql/*
+
+
+./cache

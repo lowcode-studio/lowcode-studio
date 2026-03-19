@@ -1,0 +1,158 @@
+body {
+  font-size: 12px;
+}
+
+.ant-btn {
+  height: 30px;
+  font-size: 12px;
+  border-radius: 4px;
+}
+
+.ant-form label {
+  font-size: 12px;
+}
+
+.ant-form-item-label>label {
+  font-size: 12px;
+  height: 30px;
+}
+
+.ant-form-item {
+  font-size: 12px;
+}
+.ant-form-item-control {
+  min-width: 0;
+}
+
+.ant-form-item-control-input {
+  min-height: 30px;
+}
+
+.ant-form-item-extra {
+  font-size: 12px;
+}
+
+.ant-form-item-explain {
+  font-size: 12px;
+}
+
+.ant-input {
+  height: 30px;
+  font-size: 12px;
+}
+.ant-input-prefix {
+  font-size: 12px;
+}
+.ant-input-affix-wrapper {
+  box-sizing: border-box;
+  font-size: 12px;
+  padding: 0px 11px;
+  height: 30px;
+}
+.ant-input-affix-wrapper .ant-input {
+  height: auto;
+}
+.ant-input-affix-wrapper .ant-input-password {
+  height: auto;
+}
+.ant-input-group {
+  font-size: 12px;
+}
+
+.ant-select {
+  font-size: 12px;
+}
+.ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+/* .ant-select-selector {
+  padding: 0px 4px !important;
+} */
+
+.ant-select-item {
+  font-size: 12px;
+}
+
+.ant-select-tree {
+  font-size: 12px;
+}
+
+.ant-input-number {
+  font-size: 12px;
+}
+
+.ant-radio-button-wrapper {
+  font-size: 12px;
+}
+
+.ant-picker {
+  height: 30px;
+}
+.ant-picker-input>input {
+  font-size: 12px;
+}
+
+.ant-checkbox-wrapper {
+  font-size: 12px;
+}
+
+.ant-tree {
+  font-size: 12px;
+}
+.ant-tree-switcher-line-icon,
+.ant-tree-switcher-icon {
+  vertical-align: middle !important;
+}
+
+.ant-table.ant-table-small {
+  font-size: 12px;
+}
+
+.ant-table-thead>tr>th {
+  font-weight: 600;
+  color: rgba(4, 12, 44, .65);
+}
+.ant-table-thead>tr>th {
+  height: 40px;
+}
+.ant-table.ant-table-small .ant-table-tbody>tr>td {
+  padding: 4px 8px;
+  font-size: 13px;
+  border-bottom-color: #ecedf0;
+}
+.ant-empty {
+  font-size: 12px;
+}
+
+.ant-steps-small .ant-steps-item-description {
+  font-size: 12px;
+}
+
+.ant-dropdown-trigger {
+  cursor: pointer;
+}
+
+.ant-alert-with-description .ant-alert-icon {
+  font-size: 20px;
+}
+.ant-alert-with-description .ant-alert-message {
+    font-size: 14px;
+    font-weight: 600;
+}
+.ant-alert-description {
+    font-size: 12px;
+}
+
+
+
+/* 移动端 */
+.adm-form-item-child-inner .ant-upload-list-picture .ant-upload-list-item-thumbnail {
+  width: 48px;
+  height: 48px;
+  line-height: 60px;
+}

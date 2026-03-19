@@ -1,0 +1,52 @@
+version: '3.8'
+name: lowcodestudio
+services:
+  lowcode-platform:
+    image: lowcodestudio/lowcode-platform:2026-03-amd64
+    container_name: lowcode-platform
+    restart: unless-stopped
+    ports:
+      - "8000:8000" # 访问入口
+      - "3306:3306" # MySQL 运行平台使用此数据库管理管理租户权限等相关数据，也可供低码应用使用
+      - "1337:1337" # Konga 网关管理界面
+      - "9001:9001" # MinIO 对象存储管理界面
+      # - "5432:5432" # PostgreSQL 仅kong和konga网关使用此数据库，不建议暴露
+      # - "6379:6379" # Redis 不建议暴露
+    environment:
+      - PLATFORM_URL=http://localhost:8000 # 平台访问地址，若部署在服务器上，请替换为服务器的公网IP或域名
+      - PLATFORM_WS_URL=ws://localhost:8000 # 平台WebSocket地址，若部署在服务器上，请替换为服务器的公网IP或域名
+    volumes:
+      - ./config:/config
+      - ./data/mysql:/var/lib/mysql
+      - ./data/postgresql:/var/lib/postgresql/10/main
+      - ./data/minio:/data/minio
+      - ./logs/mysql:/var/log/mysql
+      - ./logs/kong:/var/log/kong
+      - ./logs/platform:/var/log/platform
+    networks:
+      - lowcode
+  
+  lowcode-render:
+    image: lowcodestudio/lowcode-render:develop-20251229-075200
+    container_name: lowcode-render
+    restart: unless-stopped
+    environment:
+      - PASS_WORD=lowcodestudio # 前端制品包管理密码
+    volumes:
+      - ./data/render-apps:/lowcodeRender/apps
+    depends_on:
+      - lowcode-platform
+    networks:
+      - lowcode
+
+  lowcode-npm:
+    image: lowcodestudio/lowcode-npm:develop-20260316-011433
+    container_name: lowcode-npm
+    depends_on:
+      - lowcode-platform
+    networks:
+      - lowcode
+
+networks:
+  lowcode:
+    driver: bridge
