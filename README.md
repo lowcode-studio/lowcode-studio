@@ -204,9 +204,11 @@ docker run -d \
 	lowcodestudio/mermaid-ui-server:0.0.1-20260127-223428
 ```
 
-> **端口**：所有低码后端服务端口都为9090，一般选择不暴露端口。加入lowcodestudio_lowcode（compose组名_网络名）网络后，通过配置kong代理访问，（konga内配置指向服务 mermaid-ui-server:9090 ）
-> **环境变量**：必须设置 IS_PROD=True ，否则将会以热更新方式启动影响并发！！
-> **其他的环境变量**，根据低代码模型设计器中自定义的全局参数进行设置。
+> 1. **端口**：所有低码后端服务端口都为9090，一般选择不暴露端口。加入lowcodestudio_lowcode（compose组名_网络名）网络后，通过配置kong代理访问，（konga内配置指向服务 mermaid-ui-server:9090 ）
+>
+> 2. **环境变量**：必须设置 IS_PROD=True ，否则将会以热更新方式启动影响并发！！
+>
+> 3. **其他的环境变量**，根据低代码模型设计器中自定义的全局参数进行设置。
 
 #### 3. kong网关配置
 
