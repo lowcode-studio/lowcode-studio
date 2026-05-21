@@ -17,7 +17,7 @@ docker run -d \
   -v "$PWD/logs/mysql:/var/log/mysql" \
   -v "$PWD/logs/kong:/var/log/kong" \
   -v "$PWD/logs/platform:/var/log/platform" \
-  lowcodestudio/lowcode-platform:2026-03-amd64
+  lowcodestudio/lowcode-platform:2026-05-amd64
 
 
 
@@ -37,5 +37,5 @@ docker run -d \
 #   -v "$PWD/logs/mysql:/var/log/mysql" \
 #   -v "$PWD/logs/kong:/var/log/kong" \
 #   -v "$PWD/logs/platform:/var/log/platform" \
-#   lowcodestudio/lowcode-platform:2026-03-arm64
+#   lowcodestudio/lowcode-platform:2026-05-arm64
 

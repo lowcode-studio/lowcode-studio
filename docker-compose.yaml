@@ -2,7 +2,7 @@ version: '3.8'
 name: lowcodestudio
 services:
   lowcode-platform:
-    image: lowcodestudio/lowcode-platform:2026-03-amd64
+    image: lowcodestudio/lowcode-platform:2026-05-amd64
     container_name: lowcode-platform
     restart: unless-stopped
     ports:
