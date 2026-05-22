@@ -10,6 +10,7 @@ fi
 # 清理数据目录
 rm -rf data/mysql/*
 rm -rf data/postgresql/*
+rm -rf data/render-apps/*
 
 # 清理日志目录
 rm -rf logs/mysql/*
