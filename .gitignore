@@ -9,6 +9,7 @@ logs/platform/*
 
 data/mysql/*
 data/postgresql/*
+data/render-apps/*
 
 
 ./cache
