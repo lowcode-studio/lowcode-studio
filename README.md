@@ -65,7 +65,8 @@ cd /opt
 git clone https://gitee.com/lowcodestudio/lowcode-studio.git
 
 # 进入项目根目录
-cd lowcode-studio
+cd lowcode-studio && chmod -R 755 *
+
 
 # docker compose 启动
 docker compose up -d
