@@ -52,18 +52,23 @@
 
 > 若使用docker-desktop测试需设置提升容器最大内存为8G或以上
 
+# ‼️ Docker仓库地址
+https://hub.docker.com/u/lowcodestudio
+
 # 👉 启动低码运行环境
 
 ```bash
-# 先clone项目到本地
-git clone 
+# 进入安装目录
+cd /opt
 
-# cd 进入项目根目录
+# 先clone项目到本地
+git clone https://gitee.com/lowcodestudio/lowcode-studio.git
+
+# 进入项目根目录
 cd lowcode-studio
 
 # docker compose 启动
 docker compose up -d
-
 ```
 
 通过 `docker logs lowcode-platform` 检查 lowcode-platform 容器日志，
@@ -95,7 +100,7 @@ docker compose up -d
 另外两个控制台
 1. [http://localhost:1337](http://localhost:1337) konga网关的管理入口，管理主入口8000 -> 各服务的代理，默认账号密码：admin/lowcodestudio
 2. [http://localhost:9001](http://localhost:9001) minio对象存储的管理入口，管理低码应用的存储桶，默认账号密码：admin/lowcodestudio
-# 👉 导入低码应用
+# 👉 导入低码应用（示例）
 
 ### 示例应用：Mermaid UI 时序图绘制工具
 

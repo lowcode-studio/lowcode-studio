@@ -2,7 +2,7 @@ version: '3.8'
 name: lowcodestudio
 services:
   lowcode-platform:
-    image: lowcodestudio/lowcode-platform:2026-05-amd64
+    image: olr41dukayrxipxk4l.xuanyuan.run/lowcodestudio/lowcode-platform:2026-05-amd64
     container_name: lowcode-platform
     restart: unless-stopped
     ports:
@@ -27,7 +27,7 @@ services:
       - lowcode
   
   lowcode-render:
-    image: lowcodestudio/lowcode-render:develop-20260119-130412
+    image: olr41dukayrxipxk4l.xuanyuan.run/lowcodestudio/lowcode-render:develop-20260119-130412
     container_name: lowcode-render
     restart: unless-stopped
     environment:
@@ -40,7 +40,7 @@ services:
       - lowcode
 
   lowcode-npm:
-    image: lowcodestudio/lowcode-npm:develop-20260316-011433
+    image: olr41dukayrxipxk4l.xuanyuan.run/lowcodestudio/lowcode-npm:develop-20260316-011433
     container_name: lowcode-npm
     depends_on:
       - lowcode-platform
