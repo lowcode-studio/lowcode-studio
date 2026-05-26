@@ -67,12 +67,15 @@ git clone https://gitee.com/lowcodestudio/lowcode-studio.git
 # 进入项目根目录
 cd lowcode-studio
 
+# 修改docker-compose.yaml：lowcode-platform 服务的 PLATFORM_URL，PLATFORM_WS_URL 环境变量为真实访问端点IP或域名
+# 注：若本地测试，则为localhost不需修改，可跳过此步骤
+vim docker-compose.yaml
 
 # docker compose 启动
 docker compose up -d
 ```
 
-通过 `docker logs lowcode-platform` 检查 lowcode-platform 容器日志，
+通过 `docker logs -f lowcode-platform` 检查 lowcode-platform 容器日志，
 看到显示下方日志，说明启动成功
 
 ```
