@@ -1,7 +1,7 @@
 name: lowcodestudio
 services:
   lowcode-platform:
-    image: lowcodestudio/lowcode-platform:2026-05-amd64
+    image: lowcodestudio/lowcode-platform:2026-06-amd64
     container_name: lowcode-platform
     restart: unless-stopped
     ports:
@@ -26,7 +26,7 @@ services:
       - lowcode
   
   lowcode-render:
-    image: lowcodestudio/lowcode-render:develop-20260519-184054
+    image: lowcodestudio/lowcode-render:develop-20260601-213225
     container_name: lowcode-render
     restart: unless-stopped
     environment:
@@ -39,7 +39,7 @@ services:
       - lowcode
 
   lowcode-npm:
-    image: lowcodestudio/lowcode-npm:develop-20260316-011433
+    image: lowcodestudio/lowcode-npm:develop-20260619-001520
     container_name: lowcode-npm
     depends_on:
       - lowcode-platform
