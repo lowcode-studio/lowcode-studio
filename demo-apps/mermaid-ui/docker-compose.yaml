@@ -1,0 +1,16 @@
+name: mermaid-ui  # 建议为这个新服务也指定一个项目名称，避免默认使用文件夹名
+services:
+  mermaid-ui-server:
+    image: lowcodestudio/mermaid-ui-server:0.0.1-20260127-223428
+    container_name: mermaid-ui-server
+    restart: unless-stopped
+    environment:
+      - IS_PROD=True # 首次运行请设置为False（初始化数据库表结构）
+      - PLATFORM_SERVER_URL=http://lowcode-platform:8000
+      - DATABASE_MYSQL_URL=root:lowcodestudio@lowcode-platform:3306/app_mermaid_ui
+    networks:
+      - lowcodestudio_lowcode
+
+networks:
+  lowcodestudio_lowcode:
+    external: true
